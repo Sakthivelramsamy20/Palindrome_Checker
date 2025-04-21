@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import History from "./pages/History";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
 
@@ -18,11 +19,11 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Layout><Index /></Layout>} />
+          <Route path="/history" element={<Layout><History /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Layout><NotFound /></Layout>} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
