@@ -39,7 +39,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 bg-[#fbfdff] rounded-2xl shadow-sm">
       <div ref={headerRef} className="mb-16 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           <span className="text-gradient">Palindrome</span> Checker
